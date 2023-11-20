@@ -1,0 +1,10 @@
+
+services:
+  opencv:
+    image: dustynv/opencv:r32.7.1
+#    runtime: nvidia
+
+    stdin_open: true
+    tty: true
+    network_mode: host
+

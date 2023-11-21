@@ -8,6 +8,8 @@ packages = [{include = "opencv_jetson"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
+opencv-python = "^4.8.1.78"
+wget = "^3.2"
 
 
 [build-system]

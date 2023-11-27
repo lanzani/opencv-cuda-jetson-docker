@@ -12,12 +12,17 @@ You can find the image on [docker hub](https://hub.docker.com/r/federicolanzani/
 - Opencv 4.8.0
 - Numpy
 
+For details on opencv build you can check the [build script](/ubuntu-18.04/build_opencv/build_opencv.sh).
+
 
 If you are familiar with the jetson environment you are probably asking why I made this image and not used [dustynv/opencv](https://hub.docker.com/r/dustynv/opencv)
 
 The reasons are:
 - I have to use opencv version 4.8.0 (in [dustynv/opencv](https://hub.docker.com/r/dustynv/opencv) opencv version is 4.5.0)
 - I wanted to have more control on the image
+
+
+
 
 
 # Useful resources

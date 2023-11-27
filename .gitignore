@@ -264,6 +264,7 @@ pyrightconfig.json
 # End of https://www.toptal.com/developers/gitignore/api/pycharm+all,python
 
 
-ubuntu-18.04/build_opencv
+ubuntu-18.04/build_opencv/opencv
+ubuntu-18.04/build_opencv/opencv_contrib
 ubuntu-18.04/installer/*.Z
 ubuntu-18.04/installer/*.tar.gz

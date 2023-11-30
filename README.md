@@ -1,3 +1,4 @@
+![cover.png](cover.png)
 # OpenCV Jetson
 
 You can find the image on [docker hub](https://hub.docker.com/r/federicolanzani/opencv-jetson).

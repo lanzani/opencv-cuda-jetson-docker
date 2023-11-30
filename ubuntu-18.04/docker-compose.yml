@@ -5,7 +5,7 @@ version: "3"
 services:
 
   app:
-    build: .
+    image: federicolanzani/opencv-cuda-jetson
     stdin_open: true
     tty: true
     network_mode: host

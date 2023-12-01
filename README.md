@@ -1,7 +1,7 @@
 ![cover.png](cover.png)
-# OpenCV Jetson
+# OpenCV with CUDA enabled for Jetson
 
-You can find the image on [docker hub](https://hub.docker.com/r/federicolanzani/opencv-jetson).
+You can find the image on [docker hub](https://hub.docker.com/r/federicolanzani/opencv-cuda-jetson).
 
 If you need a docker image like this one but not for jetson, this repo has a [twin](https://github.com/lanzani/opencv-cuda-docker)!
 
@@ -18,9 +18,17 @@ If you need a docker image like this one but not for jetson, this repo has a [tw
 - Opencv 4.8.0
 - Numpy
 
+**Details:**
+- cuda version: 10.2
+- cudnn version: 8.2
+
 For details on opencv build you can check the [build script](/ubuntu-18.04/build_opencv/build_opencv.sh).
 
+**Base Images:** 
+- Build: made on jetson without docker
+- Runtime: nvcr.io/nvidia/l4t-base:r32.7.1
 
+# Why not jetson-containers?
 If you are familiar with the jetson environment you are probably asking why I made this image and not used [dustynv/opencv](https://hub.docker.com/r/dustynv/opencv)
 
 The reasons are:
@@ -31,7 +39,7 @@ The reasons are:
 Before running the docker image on jetson device, make sure that you have docker runtime nvidia inplace:
 1. Open: `sudo nano /etc/docker/daemon.json`
 2. Edit from:
-    ```
+    ```json
     {
         "runtimes": {
             "nvidia": {
@@ -43,7 +51,7 @@ Before running the docker image on jetson device, make sure that you have docker
     ```
 
    To:
-    ```
+    ```json
     {
         "runtimes": {
             "nvidia": {
@@ -60,6 +68,9 @@ Before running the docker image on jetson device, make sure that you have docker
 Then add user to docker group 
 1. `sudo usermod -aG docker $USER`
 2. `sudo reboot`
+
+# Run
+See [docker-compose](/ubuntu-18.04/docker-compose.yml). 
 
 # Install
 

@@ -5,7 +5,7 @@ ENV PYTHONPATH=/usr/local/lib/python3.6/site-packages
 
 RUN apt-get update && apt-get upgrade -y --autoremove
 
-RUN apt-get update && apt-get -y install  \
+RUN apt-get update && apt-get -y install \
     python3-pip \
     libtesseract4 \
     libatlas3-base \

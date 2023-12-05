@@ -268,3 +268,7 @@ ubuntu18.04-py3.6.9-opencv4.8.0/build_opencv/opencv
 ubuntu18.04-py3.6.9-opencv4.8.0/build_opencv/opencv_contrib
 ubuntu18.04-py3.6.9-opencv4.8.0/installer/*.Z
 ubuntu18.04-py3.6.9-opencv4.8.0/installer/*.tar.gz
+/ubuntu18.04-py3.11.3/build_python3.11.3/Python-Builds/Python3.11-Dist/
+/ubuntu18.04-py3.11.3/build_python3.11.3/Python-Builds/Python3.11-Dist/*
+/ubuntu18.04-py3.11.3/build_python3.11.3/Python-Builds/Python3.11-Dist/python3.11/
+/ubuntu18.04-py3.11.3/build_python3.11.3/Python-Builds/Python3.11-Dist/python3.11/*

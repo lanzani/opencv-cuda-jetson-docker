@@ -32,4 +32,4 @@ RUN cd build_python  \
 # Install python
 RUN apt-get install -y python3.11-full \
     python3-testresources \
-    && python3.10 -m ensurepip --upgrade
+    && python3.11 -m ensurepip --upgrade

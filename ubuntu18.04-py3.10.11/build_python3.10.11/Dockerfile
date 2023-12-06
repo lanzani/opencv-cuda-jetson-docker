@@ -17,10 +17,6 @@ RUN apt-get update && apt-get upgrade && apt-get -y install \
     autoconf \
     libncursesw5-dev
 
-# Make sudo dummy replacement, so we don't weaken docker security
-#RUN echo "#!/bin/bash\n\$@" > /usr/bin/sudo
-#RUN chmod +x /usr/bin/sudo
-
 # Build python
 RUN apt-get install --reinstall ca-certificates -y \
     && git clone https://github.com/JetsonHacksNano/build_python.git \

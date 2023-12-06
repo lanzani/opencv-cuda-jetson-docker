@@ -53,94 +53,64 @@ install_dependencies () {
     # open-cv has a lot of dependencies, but most can be found in the default
     # package repository or should already be installed (eg. CUDA).
     echo "Installing build dependencies."
-    apt-get update
-    apt-get dist-upgrade -y --autoremove
-    apt-get install -y \
-        build-essential \
-        cmake \
-        git \
-        gfortran \
-        libatlas-base-dev \
-        libavcodec-dev \
-        libavformat-dev \
-        libavresample-dev \
-        libcanberra-gtk3-module \
-        libdc1394-22-dev \
-        libeigen3-dev \
-        libglew-dev \
-        libgstreamer-plugins-base1.0-dev \
-        libgstreamer-plugins-good1.0-dev \
-        libgstreamer1.0-dev \
-        libgtk-3-dev \
-        libjpeg-dev \
-        libjpeg8-dev \
-        libjpeg-turbo8-dev \
-        liblapack-dev \
-        liblapacke-dev \
-        libopenblas-dev \
-        libpng-dev \
-        libpostproc-dev \
-        libswscale-dev \
-        libtbb-dev \
-        libtbb2 \
-        libtesseract-dev \
-        libtiff-dev \
-        libv4l-dev \
-        libxine2-dev \
-        libxvidcore-dev \
-        libx264-dev \
-        pkg-config \
-        python-dev \
-        python-numpy \
-        python3-dev \
-        python3-numpy \
-        python3-matplotlib \
-        qv4l2 \
-        v4l-utils \
-        zlib1g-dev \
-        python-pip \
-        build-essential \
-        cmake \
-        git \
-        wget \
-        unzip \
-        yasm \
-        pkg-config \
-        libswscale-dev \
-        libtbb2 \
-        libtbb-dev \
-        libjpeg-dev \
-        libpng-dev \
-        libtiff-dev \
-        libavformat-dev \
-        libpq-dev \
-        libxine2-dev \
-        libglew-dev \
-        libtiff5-dev \
-        zlib1g-dev \
-        libjpeg-dev \
-        libavcodec-dev \
-        libavformat-dev \
-        libavutil-dev \
-        libpostproc-dev \
-        libswscale-dev \
-        libeigen3-dev \
-        libtbb-dev \
-        libgtk2.0-dev \
-        pkg-config \
-        python-dev \
-        python-numpy \
-        python3-dev \
-        python3-numpy \
-        libeigen3-dev
-    apt-get update --fix-missing
+    # Dependencies are installed in Dockerfile
+#    apt-get update
+#    apt-get dist-upgrade -y --autoremove
+#    apt-get install -y \
+#        build-essential \
+#        cmake \
+#        git \
+#        gfortran \
+#        libatlas-base-dev \
+#        libavcodec-dev \
+#        libavformat-dev \
+#        libavresample-dev \
+#        libcanberra-gtk3-module \
+#        libdc1394-22-dev \
+#        libeigen3-dev \
+#        libglew-dev \
+#        libgstreamer-plugins-base1.0-dev \
+#        libgstreamer-plugins-good1.0-dev \
+#        libgstreamer1.0-dev \
+#        libgtk-3-dev \
+#        libjpeg-dev \
+#        libjpeg8-dev \
+#        libjpeg-turbo8-dev \
+#        liblapack-dev \
+#        liblapacke-dev \
+#        libopenblas-dev \
+#        libpng-dev \
+#        libpostproc-dev \
+#        libswscale-dev \
+#        libtbb-dev \
+#        libtbb2 \
+#        libtesseract-dev \
+#        libtiff-dev \
+#        libv4l-dev \
+#        libxine2-dev \
+#        libxvidcore-dev \
+#        libx264-dev \
+#        pkg-config \
+#        python-dev \
+#        python-numpy \
+#        python3-dev \
+#        python3-numpy \
+#        python3-matplotlib \
+#        qv4l2 \
+#        v4l-utils \
+#        zlib1g-dev \
+#        python3.10-dev
+#
+#    pip3 uninstall -y numpy matplotlib
+#    pip3 install numpy matplotlib
 }
 
 configure () {
     local CMAKEFLAGS="
-        -D PYTHON3_EXECUTABLE=/usr/bin/python3.10
-        -D OPENCV_PYTHON3_INSTALL_PATH=$(python3.10 -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())") \
-        -D PYTHON_DEFAULT_EXECUTABLE=$(which python3.10)
+        -D PYTHON3_INCLUDE_DIR=/usr/include/python3.10
+        -D PYTHON3_INCLUDE_PATH=/usr/include/python3.10
+        -D PYTHON3_EXECUTABLE=`which python3.10`
+        -D PYTHON_DEFAULT_EXECUTABLE=`which python3.10`
         -D BUILD_EXAMPLES=OFF
         -D BUILD_opencv_python2=ON
         -D BUILD_opencv_python3=ON

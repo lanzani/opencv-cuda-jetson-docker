@@ -1,7 +1,7 @@
 FROM  federicolanzani/l4t-base-r32.7.1:python3.10.11
 
 ENV DEBIAN_FRONTEND=noninteractive
-ENV PYTHONPATH=/usr/local/lib/python3.10/site-packages
+#ENV PYTHONPATH=/usr/lib/python3.10/site-packages
 
 # Install build dependencies TODO check duplicates
 RUN apt-get update && apt-get upgrade -y && \
@@ -83,7 +83,11 @@ RUN apt-get update && apt-get upgrade -y && \
     python-numpy \
     python3-dev \
     python3-numpy \
-    libeigen3-dev
+    libeigen3-dev \
+    python3.10-dev
+
+RUN pip3 uninstall -y numpy matplotlib \
+    && pip3 install numpy matplotlib
 
 RUN mkdir "build_opencv"
 

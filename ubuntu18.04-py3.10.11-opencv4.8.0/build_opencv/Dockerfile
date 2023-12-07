@@ -94,3 +94,7 @@ RUN mkdir "build_opencv"
 COPY build_opencv.sh build_opencv/
 
 RUN cd build_opencv && ./build_opencv.sh
+
+# Create package
+RUN cd /tmp/build_opencv/opencv/build \
+    && make package

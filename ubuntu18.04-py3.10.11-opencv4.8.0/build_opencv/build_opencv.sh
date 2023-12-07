@@ -192,10 +192,6 @@ main () {
 
 #    cleanup --test-warning
 
-    # Create packages
-#    cd /tmp/build_opencv/opencv/build
-#    make package
-
 }
 
 main "$@"

@@ -53,6 +53,10 @@ install_dependencies () {
     # open-cv has a lot of dependencies, but most can be found in the default
     # package repository or should already be installed (eg. CUDA).
     echo "Installing build dependencies."
+    # TODO needed?
+#    apt-get update --fix-missing
+#    apt-get dist-upgrade -y --autoremove
+
     # Dependencies are installed in Dockerfile
 #    apt-get update
 #    apt-get dist-upgrade -y --autoremove

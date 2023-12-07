@@ -72,6 +72,12 @@ Then add user to docker group
 # Run
 See [docker-compose](/ubuntu-18.04/docker-compose.yml). 
 
+To run with window:
+from jetson:
+1. export DISPLAY=:0
+2. xhost +
+
+
 # Install
 
 # Build

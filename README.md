@@ -75,6 +75,12 @@ See [docker-compose](/ubuntu-18.04/docker-compose.yml).
 # Install
 
 # Build
+1. go to X/build_opencv where X is whatever origin folder
+2. `docker build .`
+3. Once finished (on jetson nano it will take 7h) run the docker with a shared folder (to get the build files)
+   `docker run -v HOST/X/installer:/shared -i -t tag bash`
+4. Copy built packages from docker to host machine
+   `cp OpenCV-4.8.0-aarch64.* /shared/`
 
 # Video tutorials
 - [OpenCV with CUDA in Python on Jetson](https://www.youtube.com/watch?v=BCNnqTFi-Gs)

@@ -5,7 +5,7 @@ version: "3"
 services:
 
   app:
-    image: federicolanzani/mediapipe-jetson:l4t-base-r32.7.1-python3.6.9
+    image: federicolanzani/opencv-cuda-jetson
     stdin_open: true
     tty: true
     network_mode: host

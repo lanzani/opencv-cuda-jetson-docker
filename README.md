@@ -1,6 +1,9 @@
 ![cover.png](cover.png)
 # OpenCV with CUDA enabled for Jetson
 
+⚠️ LOOKING FOR MANTAINERS ⚠️
+Just open an issue and let's talk :)
+
 You can find the image on [docker hub](https://hub.docker.com/r/federicolanzani/opencv-cuda-jetson).
 
 If you need a docker image like this one but not for jetson, this repo has a [twin](https://github.com/lanzani/opencv-cuda-docker)!
